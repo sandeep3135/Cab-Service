@@ -13,7 +13,7 @@ html{
     scroll-behavior: smooth;
 }
 
-.main-container{
+/* .main-container{
     background: url(images/main-car.jpg);
     background-position: center;
     background-size: cover;
@@ -101,7 +101,7 @@ html{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-}
+} */
 
 /* .inner-content{
     flex: 1 1 45rem;
@@ -448,7 +448,7 @@ html{
       color: #000000;
     } */
     /* Floating buttons */
-    .floating-buttons {
+    /* .floating-buttons {
       position: fixed;
       bottom: 20px;
       right: 20px;
@@ -471,4 +471,73 @@ html{
     }
     .whatsapp-btn {
       background-color: #25d366;
+    } */
+
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .slide {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .slide.active {
+      opacity: 1;
+      z-index: 1;
+    }
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      transform: translateY(-50%);
+      z-index: 2;
+      transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    }
+    .hero-content h1 {
+      font-size: 50px;
+      font-weight: 800;
+      color: white;
+    }
+    .hero-content p {
+      margin-top: 10px;
+      font-size: 20px;
+      max-width: 400px;
+      color: white;
+    }
+    .slider-buttons {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 20px;
+      z-index: 3;
+    }
+    .slider-buttons button {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      border: none;
+      background-color: orange;
+      color: #000;
+      font-size: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .slider-buttons button:hover {
+      background-color: #fff;
+      color: orange;
     }
