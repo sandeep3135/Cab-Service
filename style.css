@@ -448,7 +448,7 @@ html{
       color: #000000;
     } */
     /* Floating buttons */
-    /* .floating-buttons {
+    .floating-buttons {
       position: fixed;
       bottom: 20px;
       right: 20px;
@@ -471,4 +471,4 @@ html{
     }
     .whatsapp-btn {
       background-color: #25d366;
-    } */
+    }
