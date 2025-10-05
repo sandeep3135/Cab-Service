@@ -253,7 +253,7 @@ html{
 }
 
 .about-text h1 {
-  font-size: 4rem;
+  font-size: 7rem;
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -265,13 +265,13 @@ html{
 .subtitle {
   letter-spacing: 1px;
   color: #aaa;
-  font-size: 1.2rem;
+  font-size: 1.9rem;
   margin-bottom: 15px;
 }
 
 .description {
-  font-size: 1.2rem;
-  font-weight: 400;
+  font-size: 1.8rem;
+  font-weight: 300;
   line-height: 1.6;
   margin-bottom: 25px;
   color: #ffffff;
@@ -292,26 +292,27 @@ html{
 }
 
 .feature i {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #ff8c00;
+  padding: 5px;
 }
 
 .feature h4 {
   color: #fff;
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: 2rem;
 }
 
 .feature p {
   color: #bbb;
-  font-size: 1rem;
+  font-size: 1.8rem;
   line-height: 1.4;
 }
 
 /* Buttons */
 .buttons {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
@@ -331,7 +332,9 @@ html{
 }
 
 .btn.primary:hover {
-  background-color: #ffa733;
+  background-color: #000000;
+  color: #d6e416;
+  border: 2px solid #ff8c00;
 }
 
 .btn.outline {
@@ -401,7 +404,7 @@ html{
 } */
 
 /* Mobile */
-/* @media (max-width: 576px) {
+@media (max-width: 576px) {
   .about {
     padding: 80px 5%;
   }
@@ -464,7 +467,7 @@ html{
     font-size: 0.9rem;
     padding: 10px 20px;
   }
-} */
+}
 
 /* .main-container{
     background: url(images/main-car.jpg);
