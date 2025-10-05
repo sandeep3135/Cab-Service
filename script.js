@@ -6,6 +6,16 @@
 //     mynav.classList.toggle('active');
 // }
 
+const menuToggle = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('navbar');
+
+    menuToggle.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+      menuToggle.querySelector('i').classList.toggle('fa-bars');
+      menuToggle.querySelector('i').classList.toggle('fa-times');
+    });
+
+// BannerSlider
 const slides = document.querySelectorAll('.slide');
     const nextBtn = document.getElementById('next');
     const prevBtn = document.getElementById('prev');
@@ -32,3 +42,15 @@ const slides = document.querySelectorAll('.slide');
 
     // Auto transition every 4 seconds
     setInterval(nextSlide, 4000);
+
+ // Smooth hover animation for buttons
+document.querySelectorAll(".btn").forEach((btn) => {
+  btn.addEventListener("mouseover", () => {
+    btn.style.transform = "scale(1.05)";
+  });
+  btn.addEventListener("mouseout", () => {
+    btn.style.transform = "scale(1)";
+  });
+});
+
+
