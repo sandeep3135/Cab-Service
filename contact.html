@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+<div id="header"></div>
+
+    <!-- Info Cards -->
+  <section class="info-cards">
+    <div class="card"><i class="fas fa-map-marker-alt"></i><h3>Location</h3><p>Sunshine Business Park<br>Sector 94, Poland</p></div>
+    <div class="card"><i class="fas fa-phone-alt"></i><h3>Contact</h3><p>+800 555-0198<br>+800 555-0117</p></div>
+    <div class="card"><i class="fas fa-envelope"></i><h3>Email</h3><p>techco@example.com<br>gmail@example.com</p></div>
+    <div class="card"><i class="fas fa-clock"></i><h3>Visit Between</h3><p>Mon–Sat: 8.00–5.00<br>Sunday: Closed</p></div>
+  </section>
+
+  <!-- Contact Form and Map -->
+  <section class="form-map">
+    <form class="contact-form">
+      <h2>Send Us A Message</h2>
+      <p>Give us a chance to serve and bring magic to your brand.</p>
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <input type="tel" placeholder="Your Phone" required pattern="[0-9]{10}" />
+      <input type="text" name="date" placeholder="dd-mm-yyyy" required pattern="\d{2}-\d{2}-\d{4}" />
+      <div class="form-row">
+          <select name="service" required>
+            <option value="">Choose A Service</option>
+            <option value="internship">Internship</option>
+            <option value="support">Support</option>
+            <option value="training">Training</option>
+          </select>
+        </div>
+      <textarea rows="5" placeholder="Message"></textarea>
+      <button type="submit">Send Message <i class="fas fa-arrow-right"></i></button>
+    </form>
+    <div class="map">
+      <iframe src="https://maps.google.com/maps?q=New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <h2>Ready to Work, Let’s Chat</h2>
+    <p>Our team of experts is ready to collaborate with you every step of the way, from initial consultation to implementation.</p>
+    <a href="#" class="cta-button">Contact Us Today <i class="fas fa-arrow-right"></i></a>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
