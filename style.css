@@ -192,7 +192,7 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     padding: 150px 5%;
-    background: linear-gradient(to right, #0b0b0b, #1a1a1a);
+    background: linear-gradient(to right, #0b0b0b, #272727);
 }
 
 .about-content {
@@ -251,8 +251,8 @@ nav a:hover {
     width: 90px;
     height: 90px;
     border: 3px solid #ff8c00;
-    bottom: -50px;
-    left: 5px;
+    bottom: -40px;
+    left: 7px;
     transform: rotate(45deg);
 }
 
@@ -322,7 +322,7 @@ nav a:hover {
 /* Buttons */
 .buttons {
     display: flex;
-    gap: 20gpx;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
@@ -333,27 +333,27 @@ nav a:hover {
     border-radius: 8px;
     cursor: pointer;
     transition: 0.3s ease;
-    font-size: 1rem;
+    font-size: 4rem;
 }
 
-.btn.primary {
+.btn.primaryB {
     background-color: #ff8c00;
     color: #000;
 }
 
-.btn.primary:hover {
+.btn.primary :hover {
     background-color: #000000;
-    color: #d6e416;
+    color: #ff8c00;
     border: 2px solid #ff8c00;
 }
 
-.btn.outline {
+.btn.outlineB {
     border: 2px solid #ff8c00;
     background: transparent;
     color: #ff8c00;
 }
 
-.btn.outline:hover {
+.btn.outlineB:hover {
     background: #ff8c00;
     color: #000;
 }
@@ -487,12 +487,13 @@ nav a:hover {
     padding: 80px 20px;
     text-align: center;
     position: relative;
-    background-color: #1a1a1a;
+    background: linear-gradient(to right, #272727, #0b0b0b);
 }
 
 .services-section h2 {
     font-size: 5rem;
     margin-bottom: 8px;
+    color: #ffffff;
 }
 
 .services-section h2 span {
@@ -503,7 +504,7 @@ nav a:hover {
 
 .services-section p {
     font-size: 1.8rem;
-    color: #9f9e9e;
+    color: #c0b4b4;
     margin-bottom: 40px;
 }
 
@@ -724,10 +725,11 @@ nav a:hover {
 }
 
 /* Service End */
+
 /* ---------- Latest Service Section ---------- */
 .latest-service {
   padding: 100px 5%;
-  background: linear-gradient(to right, #0b0b0b, #1a1a1a);
+  background: linear-gradient(to right, #0b0b0b, #272727);
   text-align: center;
 }
 
@@ -737,7 +739,7 @@ nav a:hover {
 }
 
 .latest-service h2 {
-  font-size: 2.5rem;
+  font-size: 5rem;
   font-weight: 700;
   color: #fff;
   margin-bottom: 10px;
@@ -748,7 +750,7 @@ nav a:hover {
 }
 
 .latest-service .subtitle {
-  font-size: 1rem;
+  font-size: 2rem;
   color: #ccc;
   margin-bottom: 60px;
 }
@@ -756,7 +758,7 @@ nav a:hover {
 /* ---------- Service Grid ---------- */
 .latest-service-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
   justify-items: center;
 }
@@ -774,20 +776,21 @@ nav a:hover {
 }
 
 .latest-service-card i {
-  font-size: 2rem;
+  font-size: 2.9rem;
   color: #ff8c00;
   margin-bottom: 20px;
 }
 
 .latest-service-card h3 {
-  font-size: 1.2rem;
+  color: #ffffff;
+  font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
 .latest-service-card p {
-  color: #bbb;
-  font-size: 0.95rem;
+  color: #ff8c00;
+  font-size: 1.6rem;
   line-height: 1.5;
 }
 
@@ -817,19 +820,19 @@ nav a:hover {
   border: none;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 5rem;
   padding: 14px 32px;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition:  0.3s ease;
 }
 
 .btn i {
-  font-size: 1rem;
+  font-size: 1.6rem;
 }
 
 .btn:hover {
   background: #ffa733;
-  transform: translateY(-2px);
+  transform: translateY(-4px);
 }
 
 /* ---------- Responsive ---------- */
@@ -846,7 +849,7 @@ nav a:hover {
   .latest-service-card {
     padding: 30px 20px;
   }
-  .btn {
+  .btn-A {
     font-size: 0.95rem;
     padding: 12px 28px;
   }
@@ -868,7 +871,7 @@ nav a:hover {
 /* ---------- Famous Places Section ---------- */
 .famous-places {
   padding: 100px 5%;
-  background: linear-gradient(to right, #0b0b0b, #272727);
+  background: linear-gradient(to right, #272727, #0b0b0b);
   text-align: center;
 }
 
@@ -878,9 +881,10 @@ nav a:hover {
 }
 
 .famous-places h2 {
-  font-size: 2.5rem;
+  font-size: 5rem;
   font-weight: 700;
   margin-bottom: 15px;
+  color: white;
 }
 
 .famous-places h2 span {
@@ -889,7 +893,7 @@ nav a:hover {
 
 .famous-places .subtitle {
   color: #ccc;
-  font-size: 1rem;
+  font-size: 2rem;
   max-width: 700px;
   margin: 0 auto 60px;
   line-height: 1.6;
@@ -933,7 +937,7 @@ nav a:hover {
 }
 
 .famous-card-body h3 {
-  font-size: 1.3rem;
+  font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 10px;
   color: #fff;
@@ -941,13 +945,13 @@ nav a:hover {
 
 .famous-card-body p {
   color: #bbb;
-  font-size: 0.95rem;
+  font-size: 1.6rem;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
 /* ---------- Buttons ---------- */
-.btn {
+.btn .outline{
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -963,6 +967,7 @@ nav a:hover {
 .btn.outline {
   border: 2px solid #ff8c00;
   background: transparent;
+  font-size: 1.3rem;
   color: #ff8c00;
 }
 
@@ -973,7 +978,7 @@ nav a:hover {
 }
 
 .btn i {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 /* ---------- Responsive ---------- */
@@ -1003,7 +1008,7 @@ nav a:hover {
 /* ---------- Why Choose us Section ---------- */
 .choose-section {
   padding: 100px 5%;
-  background: linear-gradient(to right, #0b0b0b, #1a1a1a);
+  background: linear-gradient(to right, #0b0b0b, #272727);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1026,7 +1031,7 @@ nav a:hover {
 }
 
 .choose-section-text h2 {
-  font-size: 2.8rem;
+  font-size: 5rem;
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -1037,17 +1042,17 @@ nav a:hover {
 
 .choose-section-subtitle {
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 2rem;
   letter-spacing: 1px;
   color: #aaa;
   margin-bottom: 20px;
 }
 
 .choose-section-description {
-  font-size: 1rem;
+  font-size: 1.6rem;
   line-height: 1.6;
   margin-bottom: 30px;
-  color: #bbb;
+  color: #e9d9d9;
 }
 
 /* ---------- Features ---------- */
@@ -1065,19 +1070,19 @@ nav a:hover {
 }
 
 .choose-feature i {
-  font-size: 1.5rem;
+  font-size: 2.4rem;
   color: #ff8c00;
 }
 
 .choose-feature h4 {
   color: #fff;
-  font-size: 1.1rem;
+  font-size: 2rem;
   font-weight: 600;
 }
 
 .choose-feature p {
   color: #bbb;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   line-height: 1.4;
 }
 
@@ -1092,27 +1097,29 @@ nav a:hover {
   border: none;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.5rem;
   cursor: pointer;
   transition: 0.3s ease;
 }
 
-.btn.primary {
+.btn.primaryC {
   background-color: #ff8c00;
   color: #000;
 }
 
-.btn.primary:hover {
-  background-color: #ffa733;
+.btn.primaryC:hover {
+  background-color: transparent;
+  border: 2px solid #ff8c00;
+  color: #ff8c00;
 }
 
-.btn.outline {
+.btn.outlineC {
   border: 2px solid #ff8c00;
   background: transparent;
   color: #ff8c00;
 }
 
-.btn.outline:hover {
+.btn.outlineC:hover {
   background-color: #ff8c00;
   color: #000;
 }
@@ -1130,35 +1137,41 @@ nav a:hover {
   overflow: hidden;
   border-radius: 6px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  transition: 0.3s ease;
 }
 
 .choose-img img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
 }
 
 .choose-img.main {
-  width: 350px;
+  width: 400px;
+  height: 400px;
 }
 
 .choose-img.overlay {
-  width: 250px;
+  width: 300px;
   position: absolute;
   bottom: -60px;
   right: -50px;
-  transform: rotate(-6deg);
+  transform: rotate(-10deg);
   border-color: #000;
 }
 
 .choose-shape {
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 90px;
+  height: 90px;
   border: 3px solid #ff8c00;
-  bottom: -35px;
-  left: 50px;
+  bottom: -40px;
+  left: 40px;
   transform: rotate(45deg);
+}
+
+.choose-img:hover {
+    transform: rotate(0deg);
 }
 
 /* ---------- Responsive ---------- */
@@ -1224,95 +1237,7 @@ nav a:hover {
 /* ---------- Why Choose us Section ---------- */
 
 
-/* .main-container{
-    background: url(images/main-car.jpg);
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-}
 
-.header{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 2rem 7%;
-    align-items: center;
-}
-
-.header .navbar a{
-    font-size: 2.3rem;
-    margin-left: 2.5rem;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-}
-
-.header .navbar a:hover{
-    background: #ffffff;
-    color: #000;
-    padding: .5rem 3rem;
-    border-radius: 15px;
-}
-
-#menu-bars{
-    color: white;
-    font-size: 2rem;
-    align-items: center;
-    display: none;
-}
-
-.navbar.active{
-    top: 10%;
-} */
-
-/* .background-text h2{
- color: white;
- font-size: 50px;
- position: absolute;
- top: 25%;
- left: 15%;
- transform: translate(-50%, -50%);
-}
-
-.background-text h2 span{
-    color: #000000;
-}
-
-.background-text p{
- color: #000000;
- font-size: 2rem;
- position: absolute;
- font-weight: bold;
- top: 32%;
- left: 19%;
- transform: translate(-50%, -50%);
-} */
-
-/* .taxi-image{
-    width: 50%;
-    margin: 0 auto;
-}
-
-.taxi-image img{
-    width: 100%;
-    margin-top: 260px;
-} */
-
-/* .home-container{
-    background: #ffc61a;
-    padding: 2rem 7%;
-    width: 100%;
-    padding-top: 4rem;
-}
-
-.home-content{
-    padding-top: 4rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-} */
 
 /* .inner-content{
     flex: 1 1 45rem;
@@ -1382,322 +1307,8 @@ nav a:hover {
 .submit{
     padding-top: 2rem;
 }
+*/
 
-.main-tariff{
-    padding: 3rem 7%;
-}
-
-.main-tariff h1{
-    font-size: 38px;
-    text-align: center;
-    padding-bottom: 6rem;
-}
-
-.main-tariff h1 span{
-    color: #ffc61a;
-}
-
-.inner-tarrif{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-.tarrif-container{
-    flex: 1 1 250px;
-    text-align: center;
-    padding: 3rem 0;
-}
-
-.tarrif-container img{
-    width: 60%;
-    margin-top: -50px;
-}
-
-.tarrif-container .inner-box h2{
-    font-size: 30px;
-}
-
-.tarrif-container .inner-box p{
-    font-size: 1.5rem;
-    padding: 2rem;
-}
-
-.tarrif-container .inner-box h3{
-    color: #ffc61a;
-    font-size: 2rem;
-}
-
-.tarrif-container .inner-box a{
-    font-size: 1.5rem;
-    padding: 1rem 3rem;
-}
-
-.tarrif-container:nth-child(2){
-    background: #ffc61a;
-}
-
-.heading-yellow{
-    color: black;
-}
-
-.yellow-section{
-    color: black !important;
-}
-
-.tarrif-container a{
-    color: white;
-    padding: 1rem 3rem;
-    background: black;
-    display: inline-block;
-    margin-top: 1rem;
-}
-
-.fast-booking{
-    background: url(images/secbg.png);
-    background-size: cover;
-    width: 100%;
-    background-position: center;
-}
-
-.fast-booking .fast-heading{
-    color: #ffc61a;
-    font-size: 38px;
-    text-align: center;
-    padding-top: 2rem;
-}
-
-.fast-booking h2{
-    font-style: 31px;
-    color: white;
-    text-align: center;
-}
-
-.inner-fast{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    padding: 3rem 7%;
-    align-items: center;
-}
-
-.booking-content{
-    flex: 1 1 45rem;
-}
-
-.booking-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-.inner-fast-text h1{
-    font-size: 22px;
-    color: #ffc61a;
-    padding: 2rem;
-}
-
-.icon-fast{
-    background-color: #ffc61a;
-    width: 50%;
-    height: 40px;
-    border-radius: 150px;
-    text-align: center;
-}
-
-.icon-fast span i{
-    line-height: 40px;
-    font-size: 1.5rem;
-}
-
-.testimonials{
-    background: url(images/testimonial\ back.png);
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-}
-
-.testimonials .heading-text{
-    color: #ffc61a;
-    font-size: 38px;
-    padding: 2rem;
-    text-align: center;
-}
-
-.main-testimonials{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    padding: 2rem 7%;
-}
-
-.inner-test{
-    flex: 1 1 45rem;
-    color: white;
-    background: black;
-    padding: 2rem;
-}
-
-.inner-test p{
-    font-size: 1.5rem;
-    padding: 2rem;
-}
-
-.clients{
-    display: flex;
-    align-items: center;
-}
-
-.clients h1{
-    color: #ffc61a;
-    margin-left: 1rem;
-}
-
-@media (max-width: 768px){
-    html{
-        font-size: 50%;
-    }
-    #menu-bars{
-        display: initial;
-    }
-    .navbar{
-        position: absolute;
-        top: -100%;
-        right: 0;
-        left: 0;
-    }
-    .navbar a{
-        display: block;
-        font-size: 1.5rem;
-        background: #ffc61a;
-        margin: 1rem;
-        padding: 1rem;
-    }
-    .header{
-        padding: 2rem;
-    }
-    .tarrif-container{
-        padding-bottom: 4rem;
-    }
-    .tarrif-container img{
-        width: 60%;
-        margin-top: 0px;
-    }
-    .background-text h2{
-        width: 100%;
-        text-align: center;
-    }
-} */
-
-.footer {
-    background-color: #ffffff;
-    padding: 40px 20px;
-    display: flex;
-    justify-content: space-around;
-    font-weight: bold;
-    flex-wrap: wrap;
-}
-
-.footer-column {
-    flex: 1;
-    min-width: 250px;
-    margin: 20px;
-}
-
-.footer-column h3 {
-    color: rgb(0, 0, 0);
-    margin-bottom: 15px;
-    position: relative;
-    font-size: 16px;
-    text-transform: uppercase;
-}
-
-.footer-column h3::after {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 2px;
-    background-color: orange;
-    margin-top: 6px;
-}
-
-.footer-column p,
-.footer-column li,
-.footer-column a {
-    color: #000000;
-    font-size: 14px;
-    text-decoration: none;
-    line-height: 1.8;
-}
-
-.footer-column ul {
-    list-style: none;
-    padding: 0;
-}
-
-.social-icons a {
-    display: inline-block;
-    margin-right: 10px;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background-color: #2a2d3e;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    transition: background 0.3s;
-}
-
-.social-icons a:hover {
-    background-color: orange;
-}
-
-.contact-info i {
-    color: orange;
-    margin-right: 10px;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding: 15px;
-    border-top: 1px solid #222;
-    font-size: 13px;
-    color: #000000;
-}
-
-/* Floating buttons */
-.floating-buttons {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.floating-buttons a {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    color: #fff;
-}
-
-.call-btn1 {
-    background-color: #0a66c2;
-}
-
-.whatsapp-btn {
-    background-color: #25d366;
-}
 
 /* contact section */
 a {
@@ -1856,3 +1467,112 @@ input, select {
 input:focus, select:focus {
   border-color: #007bff;
 }
+
+/* footer starts */
+.footer {
+    background: linear-gradient(to right, #272727, #0b0b0b);
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+}
+
+.footer-column h3 {
+    color: rgb(255, 255, 255);
+    margin-bottom: 15px;
+    position: relative;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.footer-column h3::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: orange;
+    margin-top: 6px;
+}
+
+.footer-column p,
+.footer-column li,
+.footer-column a {
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 1.8;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #2a2d3e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    transition: background 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: orange;
+}
+
+.contact-info i {
+    color: orange;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #000000;
+    font-size: 13px;
+    color: #ffffff;
+    background: linear-gradient(to right, #0b0b0b, #272727);
+}
+
+/* Floating buttons */
+.floating-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.floating-buttons a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+.call-btn1 {
+    background-color: #0a66c2;
+}
+
+.whatsapp-btn {
+    background-color: #25d366;
+}
+/* Footer end */
