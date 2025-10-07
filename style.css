@@ -341,8 +341,8 @@ nav a:hover {
     color: #000;
 }
 
-.btn.primary :hover {
-    background-color: #000000;
+.btn.primaryB:hover {
+    background-color: transparent;
     color: #ff8c00;
     border: 2px solid #ff8c00;
 }
@@ -1576,3 +1576,113 @@ input:focus, select:focus {
     background-color: #25d366;
 }
 /* Footer end */
+
+/* About.html */
+
+/* Unique Services Section */
+.cabx-section {
+  position: relative;
+  background: linear-gradient(to right, #272727, #0b0b0b);
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.cabx-section .cabx-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.cabx-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  width: 90%;
+}
+
+.cabx-title {
+  font-size: 5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.cabx-title span {
+  color: orange;
+  font-weight: 700;
+}
+
+.cabx-underline {
+  width: 100px;
+  height: 3px;
+  background: orange;
+  margin: 15px auto;
+  border-radius: 3px;
+}
+
+.cabx-subtitle {
+  color: #ccc;
+  font-size: 2rem;
+  margin-bottom: 60px;
+}
+
+/* Cards */
+.cabx-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.cabx-card {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 40px 25px;
+  border-radius: 12px;
+  width: 300px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border: solid 2px rgb(44, 44, 41);
+}
+
+.cabx-card:hover {
+  transform: translateY(-10px);
+  border: 2px solid orange;
+}
+
+.cabx-icon {
+  font-size: 45px;
+  color: orange;
+  margin-bottom: 20px;
+}
+
+.cabx-card h3 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: white;
+}
+
+.cabx-card p {
+  font-size: 1.6rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cabx-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cabx-card {
+    width: 90%;
+  }
+
+  .cabx-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* Unique Services Section End*/
