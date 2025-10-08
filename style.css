@@ -1720,64 +1720,6 @@ input:focus, select:focus {
   gap: 30px;
 }
 
-/* .cbt-card {
-  background: #1b1b1b;
-  padding: 30px;
-  border-radius: 20px;
-  width: 320px;
-  text-align: left;
-  position: relative;
-  overflow: hidden;
-  transition: 0.3s;
-  box-shadow: 0 5px 15px rgba(255, 165, 0, 0.1);
-}
-
-.cbt-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(255, 165, 0, 0.2);
-}
-
-.cabt-quote {
-      color: orange;
-      font-size: 1.9rem;
-      margin-bottom: 15px;
-}
-
-.cbt-text {
-  margin-top: 40px;
-  font-size: 1.5rem;
-  line-height: 1.6;
-  color: #eee;
-}
-
-.cbt-profile {
-  display: flex;
-  align-items: center;
-  margin-top: 25px;
-  gap: 15px;
-}
-
-.cbt-profile img {
-  width: 60px;
-  height: 60px;
-  border-radius: 25%;
-  object-fit: cover;
-  border: 2px solid orange;
-  transform: rotate(45deg);
-}
-
-.cbt-profile h3 {
-  font-size: 2rem;
-  color: white;
-  margin-bottom: 5px;
-}
-
-.cbt-stars {
-  color: orange;
-  font-size: 1.6rem;
-} */
-
-
 .cbt-card {
   background: #1b1b1b;
   padding: 30px;
@@ -1858,5 +1800,206 @@ input:focus, select:focus {
 
   .cbt-card {
     width: 90%;
+  }
+}
+
+/* About.html End*/
+
+
+/* Service.html */
+
+/* .cab-banner {
+      background: linear-gradient(to right, #272727, #0b0b0b);
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255, 165, 0, 0.2);
+      width: 70%;
+      max-width: 900px;
+      padding: 40px 30px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 165, 0, 0.2);
+    }
+
+    .cab-banner i {
+      font-size: 3rem;
+      color: orange;
+      margin-bottom: 20px;
+    }
+
+    .cab-banner h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .cab-banner p {
+      font-size: 1.1rem;
+      color: #ccc;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      line-height: 1.5;
+    }
+
+    .cab-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .cab-buttons a {
+      text-decoration: none;
+      padding: 12px 30px;
+      font-weight: 600;
+      border-radius: 30px;
+      transition: 0.3s;
+      font-size: 1rem;
+    }
+
+    .book-btn {
+      background-color: orange;
+      color: #000;
+      border: 2px solid orange;
+    }
+
+    .book-btn:hover {
+      background-color: #000;
+      color: orange;
+    }
+
+    .call-btn {
+      background-color: transparent;
+      color: orange;
+      border: 2px solid orange;
+    }
+
+    .call-btn:hover {
+      background-color: orange;
+      color: #000;
+    } */
+
+    /* ==== Section Container ==== */
+.instant-cab-section {
+  width: 100%;
+  background: linear-gradient(to right, #0b0b0b, #272727);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+/* ==== Card ==== */
+.instant-cab-container {
+  background: linear-gradient(145deg, #141414, #1a1a1a);
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(255, 140, 0, 0.3);
+  padding: 40px 60px;
+  max-width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instant-cab-container:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 35px rgba(255, 140, 0, 0.5);
+}
+
+/* ==== Icon ==== */
+.instant-cab-icon {
+  font-size: 4rem;
+  color: #ff8c00;
+  flex-shrink: 0;
+}
+
+/* ==== Text ==== */
+.instant-cab-content h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+.instant-cab-content h2 span {
+    color: orange;
+}
+
+.instant-cab-content p {
+  color: #cfcfcf;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* ==== Buttons ==== */
+.instant-cab-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.instant-cab-btn {
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 12px 28px;
+  transition: all 0.3s ease;
+  font-size: 1.4rem;
+}
+
+.instant-cab-btn.primary {
+  background: #ff8c00;
+  color: #000;
+}
+
+.instant-cab-btn.primary:hover {
+  background: #ffa733;
+  transform: scale(1.05);
+}
+
+.instant-cab-btn.outline {
+  border: 2px solid #ff8c00;
+  color: #ff8c00;
+  background: transparent;
+}
+
+.instant-cab-btn.outline:hover {
+  background: #ff8c00;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+  .instant-cab-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 25px;
+  }
+
+  .instant-cab-icon {
+    margin-bottom: 15px;
+  }
+
+  .instant-cab-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .instant-cab-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .instant-cab-btn {
+    width: 100%;
+    text-align: center;
   }
 }
