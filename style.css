@@ -223,7 +223,7 @@ nav a:hover {
 
 .image-box img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
 }
 
@@ -233,7 +233,7 @@ nav a:hover {
 }
 
 .image-box.overlay {
-    width: 250px;
+    width: 280px;
     height: 250px;
     position: absolute;
     bottom: -90px;
@@ -1686,3 +1686,177 @@ input:focus, select:focus {
 }
 
 /* Unique Services Section End*/
+
+/* Unique Testimonials Section */
+.cbt-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(to right, #0b0b0b, #272727);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cbt-heading h2 {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cbt-heading h2 span {
+    color: orange;
+    font-weight: 500;
+}
+
+.cbt-heading p {
+  font-size: 2rem;
+  color: #ccc;
+  margin-bottom: 50px;
+}
+
+.cbt-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* .cbt-card {
+  background: #1b1b1b;
+  padding: 30px;
+  border-radius: 20px;
+  width: 320px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(255, 165, 0, 0.1);
+}
+
+.cbt-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(255, 165, 0, 0.2);
+}
+
+.cabt-quote {
+      color: orange;
+      font-size: 1.9rem;
+      margin-bottom: 15px;
+}
+
+.cbt-text {
+  margin-top: 40px;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #eee;
+}
+
+.cbt-profile {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  gap: 15px;
+}
+
+.cbt-profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 25%;
+  object-fit: cover;
+  border: 2px solid orange;
+  transform: rotate(45deg);
+}
+
+.cbt-profile h3 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.cbt-stars {
+  color: orange;
+  font-size: 1.6rem;
+} */
+
+
+.cbt-card {
+  background: #1b1b1b;
+  padding: 30px;
+  border-radius: 20px;
+  width: 320px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(255, 165, 0, 0.1);
+  border: solid 2px rgb(69, 69, 68);
+}
+
+.cbt-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(255, 165, 0, 0.2);
+  border: solid 2px orange;
+}
+
+.cabt-quote {
+  color: orange;
+  font-size: 1.9rem;
+  margin-bottom: 15px;
+}
+
+.cbt-text {
+  margin-top: 40px;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #eee;
+}
+
+.cbt-profile {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  gap: 15px;
+}
+
+.img-wrap {
+  width: 80px;
+  height: 80px;
+  border-radius: 25%;
+  border: 2px solid orange;
+  transform: rotate(45deg);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-wrap img {
+  width: 120%;
+  height: 120%;
+  object-fit: cover;
+  transform: rotate(-45deg);
+}
+
+.cbt-profile h3 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.cbt-stars {
+  color: orange;
+  font-size: 1.6rem;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cbt-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cbt-card {
+    width: 90%;
+  }
+}
