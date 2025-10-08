@@ -154,3 +154,48 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch((error) => console.error("Footer load error:", error));
 
 });
+
+
+
+// Handle passenger and luggage increment/decrement
+document.querySelectorAll(".increment, .decrement").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const targetId = btn.dataset.target;
+    const input = document.getElementById(targetId);
+    let value = parseInt(input.value);
+
+    if (btn.classList.contains("increment")) {
+      value++;
+    } else {
+      value = Math.max(0, value - 1);
+    }
+
+    input.value = value;
+  });
+});
+
+// Form validation
+document.getElementById("taxiEnquiryForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const pickup = document.getElementById("pickup").value.trim();
+  const dropoff = document.getElementById("dropoff").value.trim();
+  const datetime = document.getElementById("datetime").value;
+  const distance = document.getElementById("distance").value;
+  const contact = document.getElementById("contact").value.trim();
+
+  if (!pickup || !dropoff || !datetime || !distance || !contact) {
+    alert("Please fill out all fields before booking.");
+    return;
+  }
+
+  // Simple phone number validation (10 digits)
+  const phonePattern = /^[0-9]{10}$/;
+  if (!phonePattern.test(contact)) {
+    alert("Please enter a valid 10-digit contact number.");
+    return;
+  }
+
+  alert("Booking successful! Thank you for choosing Comfort Cabs 🚕");
+  this.reset();
+});
