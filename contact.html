@@ -1,55 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
 </head>
+
 <body>
-    
-<div id="header"></div>
 
-    <!-- Info Cards -->
-  <section class="info-cards">
-    <div class="card"><i class="fas fa-map-marker-alt"></i><h3>Location</h3><p>Sunshine Business Park<br>Sector 94, Poland</p></div>
-    <div class="card"><i class="fas fa-phone-alt"></i><h3>Contact</h3><p>+800 555-0198<br>+800 555-0117</p></div>
-    <div class="card"><i class="fas fa-envelope"></i><h3>Email</h3><p>techco@example.com<br>gmail@example.com</p></div>
-    <div class="card"><i class="fas fa-clock"></i><h3>Visit Between</h3><p>Mon–Sat: 8.00–5.00<br>Sunday: Closed</p></div>
-  </section>
+  <!-- Header placeholder -->
+  <div id="header"></div>
 
-  <!-- Contact Form and Map -->
-  <section class="form-map">
-    <form class="contact-form">
-      <h2>Send Us A Message</h2>
-      <p>Give us a chance to serve and bring magic to your brand.</p>
-      <input type="text" placeholder="Full Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <input type="tel" placeholder="Your Phone" required pattern="[0-9]{10}" />
-      <input type="text" name="date" placeholder="dd-mm-yyyy" required pattern="\d{2}-\d{2}-\d{4}" />
-      <div class="form-row">
-          <select name="service" required>
-            <option value="">Choose A Service</option>
-            <option value="internship">Internship</option>
-            <option value="support">Support</option>
-            <option value="training">Training</option>
-          </select>
-        </div>
-      <textarea rows="5" placeholder="Message"></textarea>
-      <button type="submit">Send Message <i class="fas fa-arrow-right"></i></button>
-    </form>
-    <div class="map">
-      <iframe src="https://maps.google.com/maps?q=New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
+  <!-- Info Cards -->
+    <section class="info-cards">
+    <div class="card"><i class="fas fa-map-marker-alt"></i>
+      <h3>Location</h3>
+      <p>Sunshine Business Park<br>Sector 94, Poland</p>
+    </div>
+    <div class="card"><i class="fas fa-phone-alt"></i>
+      <h3>Contact</h3>
+      <p>+800 555-0198<br>+800 555-0117</p>
+    </div>
+    <div class="card"><i class="fas fa-envelope"></i>
+      <h3>Email</h3>
+      <p>techco@example.com<br>gmail@example.com</p>
+    </div>
+    <div class="card"><i class="fas fa-clock"></i>
+      <h3>Service Time</h3>
+      <p>24/7</p>
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <h2>Ready to Work, Let’s Chat</h2>
-    <p>Our team of experts is ready to collaborate with you every step of the way, from initial consultation to implementation.</p>
-    <a href="#" class="cta-button">Contact Us Today <i class="fas fa-arrow-right"></i></a>
+   <section class="taxi-enquiry-section">
+    <div class="taxi-enquiry-container">
+      <form id="taxiEnquiryForm" class="taxi-enquiry-form">
+        <h2>Enquiry Details</h2>
+
+        <div class="taxi-form-row">
+          <div class="taxi-form-group">
+            <label for="pickup">Pick-up address</label>
+            <input type="text" id="pickup" name="pickup" placeholder="Enter a location" required>
+          </div>
+
+          <div class="taxi-form-group">
+            <label for="passengers">Passengers</label>
+            <div class="taxi-counter">
+              <button type="button" class="decrement" data-target="passengerCount">-</button>
+              <input type="text" id="passengerCount" value="1" readonly>
+              <button type="button" class="increment" data-target="passengerCount">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="taxi-form-row">
+          <div class="taxi-form-group">
+            <label for="dropoff">Drop-off address</label>
+            <input type="text" id="dropoff" name="dropoff" placeholder="Enter a location" required>
+          </div>
+
+          <div class="taxi-form-group">
+            <label for="luggage">Pieces of luggage</label>
+            <div class="taxi-counter">
+              <button type="button" class="decrement" data-target="luggageCount">-</button>
+              <input type="text" id="luggageCount" value="0" readonly>
+              <button type="button" class="increment" data-target="luggageCount">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="taxi-form-row">
+          <div class="taxi-form-group">
+            <label for="datetime">Date and time</label>
+            <input type="datetime-local" id="datetime" name="datetime" required>
+          </div>
+
+          <div class="taxi-form-group">
+            <label for="distance">Distance</label>
+            <div class="distance-field">
+              <input type="number" id="distance" name="distance" placeholder="0" required> <span>km</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="taxi-form-row">
+          <div class="taxi-form-group full-width">
+            <label for="contact">Contact Number</label>
+            <input type="tel" id="contact" name="contact" placeholder="Enter your phone number" required>
+          </div>
+        </div>
+
+        <button type="submit" class="taxi-submit-btn">Book a Cab</button>
+      </form>
+
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59491.83390513204!2d81.57787378948098!3d21.26198053398617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dda23be28229%3A0x163ee1204ff9e240!2sRaipur%2C%20Chhattisgarh!5e0!3m2!1sen!2sin!4v1759945133424!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
   </section>
+
+
+
+  <!-- Footer placeholder -->
+  <div id="footer"></div>
 
   <script src="script.js"></script>
 </body>
+
 </html>
