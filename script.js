@@ -1,19 +1,39 @@
 document.addEventListener("DOMContentLoaded", () => {
-
+  
   /* ---------- NAVBAR TOGGLE ---------- */
-  const menuToggle = document.getElementById("menu-toggle");
-  const navbar = document.getElementById("navbar");
+  document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("header-menu-toggle");
+  const navbar = document.getElementById("header-navbar");
+  const icon = menuToggle.querySelector("i");
 
-  if (menuToggle && navbar) {
-    menuToggle.addEventListener("click", () => {
+  if (menuToggle && navbar && icon) {
+    // Toggle open/close
+    menuToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
       navbar.classList.toggle("active");
-      const icon = menuToggle.querySelector("i");
-      if (icon) {
-        icon.classList.toggle("fa-bars");
-        icon.classList.toggle("fa-times");
+      icon.classList.toggle("fa-bars");
+      icon.classList.toggle("fa-times");
+    });
+
+    // Close when clicking a nav link
+    navbar.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navbar.classList.remove("active");
+        icon.classList.add("fa-bars");
+        icon.classList.remove("fa-times");
+      });
+    });
+
+    // Close when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!navbar.contains(e.target) && !menuToggle.contains(e.target)) {
+        navbar.classList.remove("active");
+        icon.classList.add("fa-bars");
+        icon.classList.remove("fa-times");
       }
     });
   }
+});
 
   /* ---------- BANNER SLIDER ---------- */
   const slides = document.querySelectorAll(".slide");
@@ -21,38 +41,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const prevBtn = document.getElementById("prev");
   let index = 0;
 
-  if (slides.length > 0 && nextBtn && prevBtn) {
-    function showSlide(i) {
-      slides.forEach((slide, idx) => {
-        slide.classList.toggle("active", idx === i);
-      });
-    }
-
-    function nextSlide() {
+  if (slides.length && nextBtn && prevBtn) {
+    const showSlide = (i) => {
+      slides.forEach((slide, idx) => slide.classList.toggle("active", idx === i));
+    };
+    const nextSlide = () => {
       index = (index + 1) % slides.length;
       showSlide(index);
-    }
-
-    function prevSlide() {
+    };
+    const prevSlide = () => {
       index = (index - 1 + slides.length) % slides.length;
       showSlide(index);
-    }
-
+    };
     nextBtn.addEventListener("click", nextSlide);
     prevBtn.addEventListener("click", prevSlide);
-
-    // Auto transition every 4 seconds
     setInterval(nextSlide, 4000);
   }
 
-  /* ---------- BUTTON HOVER ANIMATION ---------- */
+  /* ---------- BUTTON HOVER ---------- */
   document.querySelectorAll(".btn").forEach((btn) => {
-    btn.addEventListener("mouseover", () => {
-      btn.style.transform = "scale(1.05)";
-    });
-    btn.addEventListener("mouseout", () => {
-      btn.style.transform = "scale(1)";
-    });
+    btn.addEventListener("mouseover", () => (btn.style.transform = "scale(1.05)"));
+    btn.addEventListener("mouseout", () => (btn.style.transform = "scale(1)"));
   });
 
   /* ---------- SERVICE SLIDER ---------- */
@@ -63,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".service-card");
   const container = document.querySelector(".slider-container");
 
-  if (slider && container && cards.length > 0 && pagination && previousBtn && nextoneBtn) {
+  if (slider && container && cards.length && pagination && previousBtn && nextoneBtn) {
     let index1 = 0;
     let autoScroll;
 
@@ -86,16 +95,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function updatePagination(maxIndex) {
       pagination.innerHTML = "";
-      const dots = maxIndex + 1;
-      for (let i = 0; i < dots; i++) {
-        const d = document.createElement("div");
-        d.className = "dot" + (i === index1 ? " active" : "");
-        d.addEventListener("click", () => {
+      for (let i = 0; i <= maxIndex; i++) {
+        const dot = document.createElement("div");
+        dot.className = "dot" + (i === index1 ? " active" : "");
+        dot.addEventListener("click", () => {
           index1 = i;
           update();
           resetAutoScroll();
         });
-        pagination.appendChild(d);
+        pagination.appendChild(dot);
       }
     }
 
@@ -137,65 +145,58 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ---------- HEADER & FOOTER INCLUDE ---------- */
-  fetch("header.html")
-    .then((response) => response.text())
-    .then((data) => {
-      const headerDiv = document.getElementById("header");
-      if (headerDiv) headerDiv.innerHTML = data;
-    })
-    .catch((error) => console.error("Header load error:", error));
-
-  fetch("footer.html")
-    .then((response) => response.text())
-    .then((data) => {
-      const footerDiv = document.getElementById("footer");
-      if (footerDiv) footerDiv.innerHTML = data;
-    })
-    .catch((error) => console.error("Footer load error:", error));
-
-});
-
-
-
-// Handle passenger and luggage increment/decrement
-document.querySelectorAll(".increment, .decrement").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const targetId = btn.dataset.target;
-    const input = document.getElementById(targetId);
-    let value = parseInt(input.value);
-
-    if (btn.classList.contains("increment")) {
-      value++;
-    } else {
-      value = Math.max(0, value - 1);
-    }
-
-    input.value = value;
-  });
-});
-
-// Form validation
-document.getElementById("taxiEnquiryForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const pickup = document.getElementById("pickup").value.trim();
-  const dropoff = document.getElementById("dropoff").value.trim();
-  const datetime = document.getElementById("datetime").value;
-  const distance = document.getElementById("distance").value;
-  const contact = document.getElementById("contact").value.trim();
-
-  if (!pickup || !dropoff || !datetime || !distance || !contact) {
-    alert("Please fill out all fields before booking.");
-    return;
+  const headerDiv = document.getElementById("header");
+  if (headerDiv) {
+    fetch("header.html")
+      .then((r) => r.text())
+      .then((data) => (headerDiv.innerHTML = data))
+      .catch((e) => console.error("Header load error:", e));
   }
 
-  // Simple phone number validation (10 digits)
-  const phonePattern = /^[0-9]{10}$/;
-  if (!phonePattern.test(contact)) {
-    alert("Please enter a valid 10-digit contact number.");
-    return;
+  const footerDiv = document.getElementById("footer");
+  if (footerDiv) {
+    fetch("footer.html")
+      .then((r) => r.text())
+      .then((data) => (footerDiv.innerHTML = data))
+      .catch((e) => console.error("Footer load error:", e));
   }
 
-  alert("Booking successful! Thank you for choosing Comfort Cabs 🚕");
-  this.reset();
+  /* ---------- TAXI ENQUIRY FORM ---------- */
+  const form = document.getElementById("taxiEnquiryForm");
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const pickup = document.getElementById("pickup").value.trim();
+      const dropoff = document.getElementById("dropoff").value.trim();
+      const datetime = document.getElementById("datetime").value;
+      const distance = document.getElementById("distance").value;
+      const contact = document.getElementById("contact").value.trim();
+
+      if (!pickup || !dropoff || !datetime || !distance || !contact) {
+        alert("Please fill out all fields before booking.");
+        return;
+      }
+
+      const phonePattern = /^[0-9]{10}$/;
+      if (!phonePattern.test(contact)) {
+        alert("Please enter a valid 10-digit contact number.");
+        return;
+      }
+
+      alert("Booking successful! Thank you for choosing Our Cabs 🚕");
+      form.reset();
+    });
+
+    document.querySelectorAll(".increment, .decrement").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const targetId = btn.dataset.target;
+        const input = document.getElementById(targetId);
+        let value = parseInt(input.value);
+        if (btn.classList.contains("increment")) value++;
+        else value = Math.max(0, value - 1);
+        input.value = value;
+      });
+    });
+  }
 });
